@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,145 +13,200 @@
             android:id="@+id/text_judul"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Form Pendaftaran"
-            android:textStyle="bold"
-            android:paddingBottom="10dp"
             android:layout_centerHorizontal="true"
-            android:textSize="25sp"/>
+            android:layout_marginTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Form Pendaftaran"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/txt_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:layout_below="@+id/text_judul"
+            android:ems="10"
             android:inputType="number"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/text_nama"
-            android:layout_below="@id/txt_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nama :"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/txt_id"
             android:layout_marginLeft="10dp"
-            android:textSize="19sp"/>
+            android:layout_marginTop="10dp"
+            android:text="Nama :"
+            android:textSize="19sp" />
 
 
         <EditText
             android:id="@+id/txt_name"
-            android:layout_below="@id/txt_id"
             android:layout_width="match_parent"
-            android:layout_toRightOf="@id/text_nama"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txt_id"
             android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/text_nama"
             android:ems="10"
+            android:hint="Input Nama"
             android:inputType="text"
-            android:text=""
-            android:hint="Input Nama"/>
+            android:text="" />
 
         <TextView
             android:id="@+id/text_alamat"
-            android:layout_below="@id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alamat :"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/txt_name"
             android:layout_marginLeft="10dp"
-            android:textSize="19sp"/>
+            android:layout_marginTop="10dp"
+            android:text="Alamat :"
+            android:textSize="19sp" />
 
 
         <EditText
             android:id="@+id/txt_address"
-            android:layout_below="@id/txt_name"
             android:layout_width="match_parent"
-            android:layout_toRightOf="@id/text_alamat"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txt_name"
             android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/text_alamat"
             android:ems="10"
+            android:hint="Input Alamat"
             android:inputType="text"
-            android:text=""
-            android:hint="Input Alamat"/>
+            android:text="" />
 
         <TextView
             android:id="@+id/text_noHp"
-            android:layout_below="@id/txt_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No.HP :"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/txt_address"
             android:layout_marginLeft="10dp"
-            android:textSize="19sp"/>
+            android:layout_marginTop="10dp"
+            android:text="No.HP :"
+            android:textSize="19sp" />
 
 
         <EditText
             android:id="@+id/txt_nohp"
-            android:layout_below="@id/txt_address"
             android:layout_width="match_parent"
-            android:layout_toRightOf="@id/text_noHp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/txt_address"
             android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/text_noHp"
             android:ems="10"
+            android:hint="Input No Hp"
             android:inputType="text"
-            android:text=""
-            android:hint="Input No Hp"/>
+            android:text="" />
 
         <TextView
             android:id="@+id/text_jk"
-            android:layout_below="@id/txt_nohp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jenis Kelamin :"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:textSize="19sp"/>
-
-
-        <EditText
-            android:id="@+id/txt_jk"
             android:layout_below="@id/txt_nohp"
-            android:layout_width="match_parent"
-            android:layout_toRightOf="@id/text_jk"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Jenis Kelamin :"
+            android:textSize="19sp" />
+
+        <RadioGroup
+            android:id="@+id/rgGroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:ems="10"
-            android:inputType="text"
-            android:text=""
-            android:hint="Input Pria or Wanita"/>
+            android:layout_below="@id/txt_nohp"
+            android:layout_toEndOf="@id/text_jk"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki" />
+
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Perempuan" />
+
+        </RadioGroup>
 
         <TextView
             android:id="@+id/text_lokasi"
-            android:layout_below="@id/txt_jk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lokasi Pendaftaran :"
-            android:layout_marginTop="10dp"
+            android:layout_below="@id/rgGroup"
             android:layout_marginLeft="10dp"
-            android:textSize="19sp"/>
+            android:layout_marginTop="10dp"
+            android:text="Lokasi Pendaftaran :"
+            android:textSize="19sp" />
 
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_lokasi">
+
+            <Button
+                android:id="@+id/btnPilihLokasi"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginStart="10dp"
+                android:text="Cek lokasi \n Sekarang"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/text_lokasi_sekarang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linearLayout1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Foto : "
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvFoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Pilih file"
+                android:textSize="19sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPilihFoto"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Upload"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
 
 
     </RelativeLayout>
 
-
-    <LinearLayout
+    <Button
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
-        android:layout_height="625dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="SUBMIT" />
 
-        <Button
-            android:id="@+id/btn_submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="SUBMIT" />
-
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="CANCEL" />
-    </LinearLayout>
 </LinearLayout>
